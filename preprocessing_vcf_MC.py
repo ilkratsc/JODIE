@@ -6,7 +6,7 @@ Install dependencies:
 ```
 pip install numpy loguru tqdm zarr
 ```
-python preprocessing_vcf_MC.py --n 20000 --p 5000 --ntrios 10000 --na 0 -maf 0.2
+python preprocessing_vcf_MC.py --n 5000 --p 20000 --ntrios 5000 --na 0 --maf 0.2
 ````
 --n number of individuals (required)
 --p number of markers (required)
@@ -279,12 +279,12 @@ def main(n, p, na, n_trios, k, prob):
 
 ##########################
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Preprocessing.')
+    parser = argparse.ArgumentParser(description='Generating MC.')
     parser.add_argument('--n', type=int, help='number of individuals', required = True)
     parser.add_argument('--p', type=int, help='number of markers', required = True)
     parser.add_argument('--ntrios', type=int, help='number of trios', required=True)
     parser.add_argument('--na', type=int, help='number of not genotyped mothers, fathers are calculated as n - na - ntrios', required=True)
-    parser.add_argument('--maf', type=int, default = 0.2, help='minor allele frequency (default=0.2)')
+    parser.add_argument('--maf', type=float, default = 0.2, help='minor allele frequency (default=0.2)')
     args = parser.parse_args()
     logger.info(args)
 
