@@ -75,8 +75,11 @@ def main(indir, yfile, outdir, k, pstart, pend, rmid):
     y = np.loadtxt(yfile)
 
     ## open rsid file
-    rsids = pd.read_csv(indir+"/rsids.csv", sep="\t")
-    rsids = rsids[pstart:pend]
+    if os.path.isfile(indir+"/rsids.csv"):
+        rsids = pd.read_csv(indir+"/rsids.csv", sep="\t")
+        rsids = rsids[pstart:pend]
+    else:
+        rsids = pd.DataFrame(data=[f"rsid{i}" for i in range(pstart,pend)])
     ## add empty columns
     rsids['MAF'] = None
     mX = ['meanX'+str(i) for i in range(1,k+1)]
