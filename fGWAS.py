@@ -4,7 +4,7 @@ Install dependencies:
 ```
 pip install numpy loguru pandas dask pathlib tqdm statsmodels zarr dask
 ```
-python linreg_1snp.py --indir --yfile --outdir --pstart --pend --k
+python fGWAS.py --indir indir/ --yfile phenotype.txt --outdir outputdir/ --pstart --pend --k
 --indir path to zarr directory without genotype.zarr
 --yfile  path to standardized phenotype file
 --k (default 4) k-1 is imprinting 
