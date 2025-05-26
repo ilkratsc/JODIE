@@ -124,7 +124,7 @@ def main(indir, yfile, outdir, k, pstart, pend, rmid):
     # make sure output directory exists 
     pathlib.Path(outdir).mkdir(parents=True, exist_ok=True)
     ## save rsids, pos, chr in order of the markers occuring
-    rsids.to_csv(outdir+'/linreg'+str(pstart)+'-'+str(pend)+'.csv.zip', compression="zip", index=False, sep="\t")
+    rsids.to_csv(outdir+'/fGWAS_'+str(pstart)+'-'+str(pend)+'.csv.zip', compression="zip", index=False, sep="\t")
 
 ##########################
 if __name__ == "__main__":
