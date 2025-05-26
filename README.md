@@ -15,6 +15,8 @@ pip install -U pip
 pip install numpy scipy matplotlib loguru mpi4py welford zarr==2.17.2 dask pandas tqdm scikit-allel
 deactivate
 ```
+Typcial installation times are less than a minute.
+
 ### 2. Get code
 
 ```
