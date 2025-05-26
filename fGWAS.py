@@ -8,7 +8,7 @@ python linreg_1snp.py --indir --yfile --outdir --pstart --pend --k
 --indir path to zarr directory without genotype.zarr
 --yfile  path to standardized phenotype file
 --k (default 4) k-1 is imprinting 
---outdir name should containg chr if X is split by chromosome
+--outdir name should contain chr if X is split by chromosome
 --pstart number of starting marker in file (if file needs to be split, default = 0) 
 --pend   number of ending marker in file (if file needs to be split, if file is read in as whole, pend = total number of markers in file)
 
