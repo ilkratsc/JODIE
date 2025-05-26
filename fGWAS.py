@@ -80,6 +80,7 @@ def main(indir, yfile, outdir, k, pstart, pend, rmid):
         rsids = rsids[pstart:pend]
     else:
         rsids = pd.DataFrame(data=[f"rsid{i}" for i in range(pstart,pend)])
+        logger.info("Generating rsids file.")
     ## add empty columns
     rsids['MAF'] = None
     mX = ['meanX'+str(i) for i in range(1,k+1)]
